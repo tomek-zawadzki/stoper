@@ -10,10 +10,4 @@ body {
   align-items: center;
   flex-direction: column;
   height: 100vh;
-  background: rgb(238, 174, 202);
-  background: radial-gradient(
-    circle,
-    rgba(238, 174, 202, 1) 0%,
-    rgba(68, 62, 82, 1) 36%
-  );
-}
+  background-color: #333;
