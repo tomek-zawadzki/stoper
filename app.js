@@ -14,7 +14,12 @@ const closeModalBtn = document.querySelector(".close");
 let countTime;
 let minutes = 0;
 let seconds = 0;
+
+let timesArr = [];
+
 const handleStart = () => {
+  clearInterval(countTime);
+
   countTime = setInterval(() => {
     if (seconds < 9) {
       seconds++;
@@ -27,7 +32,26 @@ const handleStart = () => {
       seconds = 0;
       stopwatch.textContent = `${minutes}:00`;
     }
-  }, 1);
+  }, 1000);
+};
+
+const handlePause = () => {
+  clearInterval(countTime);
+};
+
+const handleStop = () => {
+  time.innerHTML = `Ostatni czas: ${stopwatch.textContent}`;
+
+  if (stopwatch.textContent !== "0:00") {
+    time.style.visibility = "visible";
+    timesArr.push(stopwatch.textContent);
+  }
+  clearInterval(countTime);
+  stopwatch.textContent = "0:00";
+  seconds = 0;
+  minutes = 0;
 };
 
 startBtn.addEventListener("click", handleStart);
+pauseBtn.addEventListener("click", handlePause);
+stopBtn.addEventListener("click", handleStop);
