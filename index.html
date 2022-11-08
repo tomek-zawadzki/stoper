@@ -10,12 +10,16 @@
       src="https://kit.fontawesome.com/aee95fd16a.js"
       crossorigin="anonymous"
     ></script>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;700&display=swap");
+    </style>
     <title>Stoper</title>
   </head>
   <body>
     <div class="container">
-      <i class="colours">🖌️</i>
-      <i class="fas fa-question"></i>
+      <div class="info">
+        <i class="fas fa-question"></i>
+      </div>
       <h1 class="title">Stoper</h1>
       <p class="stopwatch">0:00</p>
       <p class="time">0:00</p>
@@ -26,6 +30,7 @@
         <button class="reset"><i class="fas fa-times"></i></button>
         <button class="history">Archiwum</button>
       </div>
+      <ul class="time-list"></ul>
     </div>
     <div class="modal-shadow">
       <div class="modal">
@@ -34,7 +39,8 @@
         <p><i class="fas fa-pause"></i> - pauza</p>
         <p><i class="fas fa-stop"></i> - stop</p>
         <p>
-          <i class="fas fa-times"> - skasuj wszystko (łącznie z archiwum</i>
+          <i class="fas fa-times"> </i>
+          - skasuj wszystko (łącznie z archiwum)
         </p>
         <p><strong>Archiwum</strong> - zobacz wcześniejsze pomiary</p>
         <button class="close">Zamknij</button>
