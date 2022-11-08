@@ -46,6 +46,16 @@ const handleStop = () => {
     time.style.visibility = "visible";
     timesArr.push(stopwatch.textContent);
   }
+  clearAll();
+};
+
+const handleReset = () => {
+  time.style.visibility = "hidden";
+  timesArr = [];
+  clearAll();
+};
+
+const clearAll = () => {
   clearInterval(countTime);
   stopwatch.textContent = "0:00";
   seconds = 0;
@@ -55,3 +65,4 @@ const handleStop = () => {
 startBtn.addEventListener("click", handleStart);
 pauseBtn.addEventListener("click", handlePause);
 stopBtn.addEventListener("click", handleStop);
+resetBtn.addEventListener("click", handleReset);
